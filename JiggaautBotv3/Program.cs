@@ -12,10 +12,9 @@ namespace JiggaautBotv3
         private static ITelegramBotClient botClient;
         static void Main()
         {
-            botClient = new TelegramBotClient("896718256:AAFo6A441liNrCn-pWStWPcN5QOlKGDzWOU");
+            botClient = new TelegramBotClient("896718256:AAEgsxXzo09I6nQB-7On8FuEBlCTO8ZyHCI");
             var me = botClient.GetMeAsync().Result;
             Console.WriteLine($"Bot id: {me.Id}, Bot name: {me.FirstName}");
-
             botClient.OnMessage += BotOnMessage;
             botClient.StartReceiving();
             Console.ReadLine();
